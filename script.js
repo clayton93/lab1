@@ -11,7 +11,7 @@ function changeCar() {
 }
 
 function startTimer() {
-	setInterval(changeMotd, 3000);
+	setInterval(function(){changeMotd()}, 3000);
 	
 	// later I want to add some more automated stuff
 }
