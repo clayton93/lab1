@@ -27,7 +27,8 @@ function changeMotd(){
 function calculateCarValue(form) {
 	
 	var purchasePrice = form.carPurchasePrice.value;
-	var carAge = form.carAge.value;
+	var carAge = parseInt(form.carAge.value.charAt(0));
+	var value;
 	
 	if(carAge <= 2) value = calculateCarPrice(purchasePrice, 2);
 	if(carAge == 3) value = calculateCarPrice(purchasePrice, 3);
@@ -35,7 +36,7 @@ function calculateCarValue(form) {
 	
 	// If the car is 5 or more years we want it
 	// More cheap stock is what we need!
-	if(carAge = 5 || carAge > 5){
+	if(carAge == 5 || carAge > 5){
 		window.alert("I would be happy to take this rust bucket car off your hands. It's too old if it's " + carAge + " years old.");
 		return;
 	}
